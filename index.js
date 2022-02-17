@@ -37,7 +37,7 @@ function addToTeam() {
     }
     else if (employeeRole === "Finish") {
     }
-     renderTeam();
+    renderTeam();
   });
 }
 
@@ -131,18 +131,32 @@ function internInfo() {
 // const fileName =  require('./output/index.html');
 //   
 
-function htmlPageContent(data){
-console.log(data)
-  return 
+const htmlPageContent   = ({managerName, managerId, managerEmail,managerOffice})=>
+console.log(team)
+// console.log(data.managerName)
+return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ${managerName}
+</body>
+</html>`
+
+
   // write the html page
   // use the data passed to the function to  log the data of each member of the team
-  `${ }
-  `
-}
+  // `${}`;
+// };
 
     function renderTeam() {
+      // console.log(team)
       const html=htmlPageContent(team)
-      console.log(html)
+      
     // fs.writeFile('team.html',html, (err)=>
     //     err? console.log(err) : console.log("success")
     // )
