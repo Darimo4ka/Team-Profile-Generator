@@ -3,15 +3,16 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const fs = require("fs");
+const path = require("path");
+
+// link to page creation 
+const generateHTML = path.resolve(__dirname, "output");
+const outputPath = path.join(generateHTML, "team.html");;
 
 
-const  OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "index.html");
-
-const render = require("./lib/htmlRenderer");
-const internal = require("stream");
-
-const team = [];
+ const render = require("./lib/htmlRenderer"); 
+ const team = [];
+ 
 addToTeam();
 
 function addToTeam(){
@@ -39,7 +40,7 @@ inquirer.prompt([
         internInfo();
     }
     else if(employeeRole === "Finish"){
-        renderTeam();
+       renderTeam();
     }
 
 });
@@ -96,7 +97,8 @@ function engineerInfo() {
         name: "engineerGithub",
         message: "Engineer's Github username:"
       }
-    ]).then(function(data) {
+    ])
+    .then(function(data) {
       const engineer = new Engineer(data.engineerName, data.engineerId, data.engineerEmail, data.engineerGithub);
       team.push(engineer);
       addToTeam();
@@ -125,22 +127,26 @@ function engineerInfo() {
         name: "internSchool",
         message: "Intern's School:"
       }
-    ]).then(function(data) {
+    ])
+    .then(function(data) {
       const intern = new Intern(data.internName, data.internId, data.internEmail, data.internSchool);
       team.push(intern);
       addToTeam();
     });
   }
-  
+//   //  create function to write index.html file to log output:
+// const fileName =  require('./output/index.html');
   function renderTeam() {
-    fs.writeFile(outputPath, render(team), "utf-8", function(error, data) {
-      if (error) {
-        throw error;
-      }
-  
-      console.log("Successfully rendered team!");
-  
+    fs.writeFile(outputPath, render(team), "utf-8", function (error, data){
+        // console.log(generateHTML);
+        // console.log(render(team));
+        if (error){
+            return console.log(err)
+        } else{
+            console.log("success")
+        }
     })
-  }
+}
+
 
 
