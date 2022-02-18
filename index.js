@@ -36,8 +36,10 @@ function addToTeam() {
       internInfo();
     }
     else if (employeeRole === "Finish") {
+      generateHTML(team);
     }
-    renderTeam();
+
+    // renderTeam();
   });
 }
 
@@ -127,25 +129,28 @@ function internInfo() {
       addToTeam();
     });
 }
+
+
+
 //   //  create function to write index.html file to log output:
 // const fileName =  require('./output/index.html');
 //   
 
-const htmlPageContent   = ({managerName, managerId, managerEmail,managerOffice})=>
-console.log(team)
-// console.log(data.managerName)
-return `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    ${managerName}
-</body>
-</html>`
+// const htmlPageContent   = ({managerName, managerId, managerEmail,managerOffice})=>
+// console.log(team)
+// // console.log(data.managerName)
+// return `<!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
+// <body>
+//     // ${managerName}
+// </body>
+// </html>`
 
 
   // write the html page
@@ -153,11 +158,11 @@ return `<!DOCTYPE html>
   // `${}`;
 // };
 
-    function renderTeam() {
-      // console.log(team)
-      const html=htmlPageContent(team)
+  //   function renderTeam() {
+  //     // console.log(team)
+  //     const html=htmlPageContent(team)
       
-    // fs.writeFile('team.html',html, (err)=>
-    //     err? console.log(err) : console.log("success")
-    // )
-  }
+  //   // fs.writeFile('team.html',html, (err)=>
+  //   //     err? console.log(err) : console.log("success")
+  //   // )
+  // }
