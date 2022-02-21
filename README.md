@@ -55,6 +55,13 @@ node index.js
 ![Screen Shot VStudio](./output/images/one.png)
 ![Screen Shot VStudio](./output/images/two.png)
 
+## Deployment
+
+alkthrough video demonstrating the functionality of the application:
+
+GitHub: https://github.com/Darimo4ka/Team-Profile-Generator
+
+
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -4,6 +4,7 @@ const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path"); 
+
 //  giving where to create html when function genereateHTML called.
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
