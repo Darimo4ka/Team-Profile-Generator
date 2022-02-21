@@ -57,7 +57,8 @@ node index.js
 
 ## Deployment
 
-alkthrough video demonstrating the functionality of the application:
+ Video demonstrating the functionality of the application:
+ https://drive.google.com/file/d/1-Cl7-KBvLaBO07RfkStpkhaT2NcUndGr/view?usp=sharing
 
 GitHub: https://github.com/Darimo4ka/Team-Profile-Generator
 
